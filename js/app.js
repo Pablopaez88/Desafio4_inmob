@@ -1,11 +1,11 @@
 function renderizarPropiedades() {
-    // Renderizar propiedades en venta (solo 3)
+    
     const ventaContainer = document.getElementById('propiedades_venta');
     propiedades_venta.slice(0, 3).forEach(prop => {
         ventaContainer.innerHTML += crearCardPropiedad(prop);
     });
 
-    // Renderizar propiedades en alquiler (solo 3)
+   
     const alquilerContainer = document.getElementById('propiedades-alquiler');
     propiedades_alquiler.slice(0, 3).forEach(prop => {
         alquilerContainer.innerHTML += crearCardPropiedad(prop);
@@ -13,7 +13,7 @@ function renderizarPropiedades() {
 }
 
 function crearCardPropiedad(prop) {
-    const esVenta = prop.costo > 100000; // Asumimos que si el costo es > 100,000 es venta
+    const esVenta = prop.costo > 100000;
     
     return `
         <div class="property">
@@ -33,5 +33,5 @@ function crearCardPropiedad(prop) {
     `;
 }
 
-// Renderizar al cargar la página
+
 document.addEventListener('DOMContentLoaded', renderizarPropiedades);
